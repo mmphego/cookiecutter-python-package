@@ -12,7 +12,6 @@ from setuptools import Command, find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-
 # Package meta-data.
 AUTHOR = "{{ cookiecutter.full_name.replace('\"', '\\\"') }}"
 DESCRIPTION = "{{ cookiecutter.project_short_description }}"
@@ -45,12 +44,6 @@ SCRIPTS = []
 for dirname, dirnames, filenames in os.walk("scripts"):
     for filename in filenames:
         SCRIPTS.append(os.path.join(dirname, filename))
-
-
-setup_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest-runner',{%- endif %} ]
-
-test_requirements = [{%- if cookiecutter.use_pytest == 'y' %}'pytest',{%- endif %} ]
-
 
 {%- set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',
@@ -137,7 +130,7 @@ setup(
     keywords='{{ cookiecutter.project_slug }}',
     setup_requires=setup_requirements,
     test_suite='tests',
-    tests_require=test_requirements,
+    tests_require=['pytest', 'unittest'],
     project_urls={
         "Bug Reports": f"{URL}/issues",
         "Source": URL,
