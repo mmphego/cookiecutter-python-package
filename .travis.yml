@@ -8,7 +8,7 @@ notifications:
   email: change
 
 install:
-  - pip install -U tox-travis pytest-cookies pytest yaml cookiecutter
+  - pip install -U tox-travis pytest-cookies pytest cookiecutter
 
 script:
   - py.test tests

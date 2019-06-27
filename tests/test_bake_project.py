@@ -1,12 +1,8 @@
 import datetime
-import importlib
 import os
 import shlex
 import subprocess
-import sys
 from contextlib import contextmanager
-
-import yaml
 from cookiecutter.utils import rmtree
 
 
