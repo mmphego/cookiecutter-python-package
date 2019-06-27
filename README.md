@@ -1,21 +1,14 @@
 # Cookiecutter Python Package
 
-[![Updates](https://pyup.io/repos/github/mmphego/cookiecutter-python-package/shield.svg)](https://pyup.io/repos/github/mmphego/cookiecutter-python-package/)
-
 [![image](https://travis-ci.com/mmphego/cookiecutter-python-package.svg?branch=master)](https://travis-ci.com/mmphego/cookiecutter-python-package)
 
 -   GitHub repo: <https://github.com/mmphego/cookiecutter-python-package/>
 
 # Features
 
--   Testing setup with `unittest` and `python setup.py test` or
-    `py.test`
--   [Travis-CI](http://travis-ci.org/): Ready for Travis Continuous
-    Integration testing
-
-# Build Status
-
-[![Linux build status on Travis CI](https://img.shields.io/travis/mmphego/cookiecutter-python-package.svg)](https://travis-ci.org/mmphego/cookiecutter-python-package)
+-   Testing setup with `unittest` and `py.test`
+-   [Travis-CI](http://travis-ci.org/): Ready for Travis Continuous Integration testing
+-   [Codacy](https://app.codacy.com/): Automated your code quality
 
 # Quickstart
 
@@ -33,7 +26,7 @@ cookiecutter https://github.com/mmphego/cookiecutter-python-package.git
 Then:
 
 -   Create a repo and put it there.
--   Add the repo to your [Travis-CI](http://travis-ci.org/) account.
+-   Add the repo to your [Travis-CI](http://travis-ci.com/) account.
 -   Install the requirements into a virtualenv.
     (`pip install -r requirements.txt`)
 -   [Register](https://packaging.python.org/distributing/#register-your-project)
