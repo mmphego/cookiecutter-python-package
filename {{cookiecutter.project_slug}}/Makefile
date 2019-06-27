@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build docs help
+.PHONY: clean clean-test clean-pyc clean-build docs help changelog
 .DEFAULT_GOAL := help
 
 define PRINT_HELP_PYSCRIPT
@@ -44,6 +44,9 @@ formatter: ## Format style with black
 
 test: ## run tests quickly with the default Python
 	python setup.py test
+
+changelog: ## Generate changelog
+	docker run -it --rm -v "$PWD:/data" mmphego/git-chglog --init
 
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source {{ cookiecutter.project_slug }} setup.py test
