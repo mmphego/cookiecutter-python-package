@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - 3.6
+
+# Notify by email when build results changes
+notifications:
+  email: change
+
+install:
+  - pip install -U tox-travis pytest-cookies pytest
+
+script:
+  - py.test tests
