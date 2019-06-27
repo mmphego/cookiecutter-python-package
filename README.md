@@ -9,6 +9,7 @@
 -   Testing setup with `unittest` and `py.test`
 -   [Travis-CI](http://travis-ci.org/): Ready for Travis Continuous Integration testing
 -   [Codacy](https://app.codacy.com/): Automated your code quality
+-   [Github CHANGELOG Generator](https://github.com/mmphego/my-dockerfiles/tree/master/git-changelog-generator): Generate changelog with ease
 
 # Quickstart
 
