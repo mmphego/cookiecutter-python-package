@@ -8,9 +8,21 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_running_script": "tweeter_sentiment_checker",
   "version": "0.1.0",
+  "add_pypi_badge": "y",
+  "add_codacy_badge": "y",
   "add_python_version_badge": "y",
   "add_licence_badge": "y",
   "add_saythanks_badge": "y",
-  "command_line_interface": ["Argparse", "No command-line interface"],
-  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+  "command_line_interface": [
+    "Argparse",
+    "No command-line interface"
+  ],
+  "open_source_license": [
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ]
 }

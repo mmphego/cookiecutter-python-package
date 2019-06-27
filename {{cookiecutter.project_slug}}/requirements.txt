@@ -1,13 +1,10 @@
 black
-bumpversion
 coverage
 flake8
 isort
 pip
 pytest
 pytest-runner
-Sphinx
 tox
 twine
-watchdog
 wheel

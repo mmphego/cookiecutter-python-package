@@ -4,6 +4,9 @@
 """Tests for `{{ cookiecutter.project_slug }}` package."""
 
 import unittest
+import random
+import warnings
+
 from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):

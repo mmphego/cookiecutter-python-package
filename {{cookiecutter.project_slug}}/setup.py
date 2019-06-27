@@ -6,8 +6,8 @@
 import io
 import os
 import sys
-
 from shutil import rmtree
+
 from setuptools import Command, find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -18,8 +18,11 @@ DESCRIPTION = "{{ cookiecutter.project_short_description }}"
 EMAIL = "{{ cookiecutter.email }}"
 NAME = "{{ cookiecutter.project_slug }}"
 REQUIRED = [
-            # put all required packages here
-            ]
+    # put all required packages here
+    "black", "coverage", "flake8", "isort",
+    "pip", "pytest", "tox", "twine", "wheel",
+]
+
 REQUIRES_PYTHON = ">=3.6.0"
 URL = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
 VERSION = "{{ cookiecutter.version }}"

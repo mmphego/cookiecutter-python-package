@@ -2,12 +2,10 @@
 
 language: python
 python:
-  - 2.7
   - 3.6
 
 # sudo false implies containerized builds
 sudo: false
-
 
 # Notify by email when build results changes
 notifications:
@@ -18,11 +16,11 @@ before_install:
   - pip install -U tox-travis pytest nose
 
 install:
-  - python setup.py install
+  - pip install -U .
 
 script:
-  - echo "Command to run actual script."
+  - {{cookiecutter.project_running_script}}.py
 
 # command to run tests, e.g. python setup.py test
 after_script:
-  - tox
+  - pytest
