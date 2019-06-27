@@ -108,7 +108,7 @@ To run a subset of tests:
 python3 -m unittest [tests.test](){{ cookiecutter.project_slug }}
 ```
 
-##Deploying
+## Deploying
 
 A reminder for the maintainers on how to publish. Make sure all your
 changes are committed (including an entry in CHANGELOG.md).
