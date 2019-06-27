@@ -97,7 +97,10 @@ class UploadCommand(Command):
         self.status("Pushing git tags...")
         os.system(f"git tag v{about["__version__"]}")
         os.system("git push --tags")
-
+        response = input("Do you want to generate a CHANGELOG.md? (y/n) ")
+        if response == 'Y' or 'y':
+            self.status("Generating the CHANGELOG.md.")
+            os.system("make changelog")
         sys.exit()
 
 
