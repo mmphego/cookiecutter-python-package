@@ -2,7 +2,7 @@
 # {{ cookiecutter.project_name }}
 
 ![GitHub](https://img.shields.io/github/license/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}.svg)
-[![Build Status](https://img.shields.io/travis/%7B%7B%20cookiecutter.github_username%20%7D%7D/%7B%7B%20cookiecutter.project_slug%20%7D%7D.svg)](https://travis-ci.com/%7B%7B%20cookiecutter.github_username%20%7D%7D/%7B%7B%20cookiecutter.project_slug%20%7D%7D)
+[![Build Status](https://img.shields.io/travis/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}svg)](https://travis-ci.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }})
 {% if cookiecutter.add_codacy_badge == 'y' %}
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/43713e0b78f547e8912ff05c9350cffb)](https://app.codacy.com/app/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}?utm_source=github.com&utm_medium=referral&utm_content={{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}&utm_campaign=Badge_Grade_Dashboard)
 {% endif %}
@@ -35,7 +35,7 @@ this [Python installation guide](http://docs.python-guide.org/en/latest/starting
 
 ## From sources
 
-The sources for {{ cookiecutter.project_name }} can be downloaded from the [Github repo](https://github.com/%7B%7B%20cookiecutter.github_username%20%7D%7D/%7B%7B%20cookiecutter.project_slug%20%7D%7D).
+The sources for {{ cookiecutter.project_name }} can be downloaded from the [Github repo](https://github.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}).
 
 You can either clone the public repository:
 
@@ -43,7 +43,7 @@ You can either clone the public repository:
 git clone git://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 ```
 
-Or download the [tarball](https://github.com/%7B%7B%20cookiecutter.github_username%20%7D%7D/%7B%7B%20cookiecutter.project_slug%20%7D%7D/tarball/master):
+Or download the [tarball](https://github.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}/tarball/master):
 
 ```bash
 curl  -OL https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/tarball/master
