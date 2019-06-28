@@ -5,7 +5,7 @@ import argparse
 import pathlib
 import sys
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug.title().replace('_', '').replace('-', '') }}
 
 
 def main():

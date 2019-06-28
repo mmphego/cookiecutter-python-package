@@ -7,7 +7,7 @@ import unittest
 import random
 import warnings
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug.title().replace('_', '').replace('-', '') }}
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
     """Tests for `{{ cookiecutter.project_slug }}` package."""
