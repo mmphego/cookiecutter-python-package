@@ -41,7 +41,7 @@ if not VERSION:
     with open(os.path.join(here, project_slug, "__version__.py")) as f:
         exec(f.read(), about)
 else:
-    about.get("__version__") = VERSION
+    about["__version__"] = VERSION
 
 SCRIPTS = []
 for dirname, dirnames, filenames in os.walk("scripts"):
@@ -95,7 +95,7 @@ class UploadCommand(Command):
         os.system("twine upload dist/*")
 
         self.status("Pushing git tags...")
-        os.system(f"git tag v{about.get("__version__")}")
+        os.system(f"git tag v{about.get('__version__')}")
         os.system("git push --tags")
         response = input("Do you want to generate a CHANGELOG.md? (y/n) ")
         if response == 'Y' or 'y':
@@ -134,7 +134,6 @@ setup(
         'Programming Language :: Python :: 3.7',
     ],
     keywords='{{ cookiecutter.project_slug }}',
-    setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=['pytest', 'unittest'],
     project_urls={
