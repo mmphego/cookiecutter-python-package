@@ -3,7 +3,7 @@
 """Main module."""
 
 import coloredlogs
-from logger import LoggingClass
+from {{ cookiecutter.project_slug }}.logger import LoggingClass
 
 
 class {{ cookiecutter.project_slug.title().replace('_', '').replace('-', '') }}(LoggingClass):
