@@ -2,14 +2,12 @@
 
 """Main module."""
 
-import coloredlogs
-from {{ cookiecutter.project_slug }}.logger import LoggingClass
 
+from loguru import logger
 
 class {{ cookiecutter.project_slug.title().replace('_', '').replace('-', '') }}(LoggingClass):
     def __init__(self, log_level="INFO"):
-
-        self.logger.setLevel(log_level.upper())
-        coloredlogs.install(level=log_level.upper())
+        self.logger = logger
+        self.logger.level(log_level.upper())
 
     # Code goes here

@@ -19,7 +19,7 @@ EMAIL = "{{ cookiecutter.email }}"
 NAME = "{{ cookiecutter.project_slug }}"
 REQUIRED = [
     # put all required packages here
-    "black", "coverage", "cploredlogs", "flake8", "isort",
+    "black", "coverage", "cploredlogs", "flake8", "isort", "loguru"
     "pip", "pytest", "tox", "twine", "wheel",
 ]
 
