@@ -18,10 +18,13 @@ DESCRIPTION = "{{ cookiecutter.project_short_description }}"
 EMAIL = "{{ cookiecutter.email }}"
 NAME = "{{ cookiecutter.project_slug }}"
 REQUIRED = [
-    # put all required packages here
-    "black", "coverage", "cploredlogs", "flake8", "isort", "loguru"
-    "pip", "pytest", "tox", "twine", "wheel",
+    "loguru",
 ]
+
+EXTRAS = {
+    'dev' :["twine", "black", "flake8", "isort", "pip", "twine", "wheel"],
+    'testing': ["coverage", "pytest", "tox"]
+}
 
 REQUIRES_PYTHON = ">=3.6.0"
 URL = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
@@ -118,6 +121,7 @@ setup(
         exclude=["tests", "*.tests", "*.tests.*", "tests.*"]
         ),
     install_requires=REQUIRED,
+    extras_require=EXTRAS,
     include_package_data=True,
     scripts=SCRIPTS,
 {%- if cookiecutter.open_source_license in license_classifiers %}
