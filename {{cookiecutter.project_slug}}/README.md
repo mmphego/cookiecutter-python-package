@@ -2,7 +2,7 @@
 # {{ cookiecutter.project_name }}
 
 ![GitHub](https://img.shields.io/github/license/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}.svg)
-[![Build Status](https://img.shields.io/travis/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}svg)](https://travis-ci.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }})
+[![Build Status](https://img.shields.io/travis/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}.svg)](https://travis-ci.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }})
 {% if cookiecutter.add_codacy_badge == 'y' %}
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/43713e0b78f547e8912ff05c9350cffb)](https://app.codacy.com/app/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}?utm_source=github.com&utm_medium=referral&utm_content={{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}&utm_campaign=Badge_Grade_Dashboard)
 {% endif %}
