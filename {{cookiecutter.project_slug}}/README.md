@@ -10,7 +10,7 @@
 [![Python](https://img.shields.io/badge/Python-3.6%2B-red.svg)](https://www.python.org/downloads/)
 {% endif %}
 {% if cookiecutter.add_pypi_badge == 'y' %}
-![PyPI](https://img.shields.io/pypi/v/>{{cookiecutter.project_slug }}.svg?color=green&label=pypi%20release)
+![PyPI](https://img.shields.io/pypi/v/{{cookiecutter.project_slug }}.svg?color=green&label=pypi%20release)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/{{cookiecutter.project_slug }}.svg?label=PyPi%20Downloads)
 {% endif %}
 {% if cookiecutter.add_saythanks_badge == 'y' %}

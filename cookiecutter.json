@@ -2,6 +2,7 @@
   "full_name": "Mpho Mphego",
   "email": "mpho112@gmail.com",
   "github_username": "mmphego",
+  "paypal_username": "{{ cookiecutter.github_username }}",
   "pypi_username": "{{ cookiecutter.github_username }}",
   "project_name": "Sentiments Analysis",
   "project_short_description": "Sentiment Analysis on Twitter.",

@@ -6,6 +6,8 @@
 import io
 import os
 import sys
+
+from subprocess import Popen
 from shutil import rmtree
 
 from setuptools import Command, find_packages, setup
@@ -33,9 +35,9 @@ VERSION = "{{ cookiecutter.version }}"
 
 try:
     with io.open(os.path.join(here, "README.md"), encoding="utf-8") as f:
-        long_description = "\n" + f.read()
+        LONG_DESCRIPTION = "\n" + f.read()
 except FileNotFoundError:
-    long_description = DESCRIPTION
+    LONG_DESCRIPTION = DESCRIPTION
 
 # Load the package's __version__.py module as a dictionary.
 about = {}
@@ -93,25 +95,39 @@ class UploadCommand(Command):
 
         self.status("Building Source and Wheel (universal) distribution...")
         os.system(f"{sys.executable} setup.py sdist bdist_wheel --universal")
+        try:
+            cmd = "twine test dist/*".split(" ")
+            p = Popen(cmd, bufsize=-1)
+            p.communicate()
+            assert p.returncode == 0
+        except AssertionError:
+            self.status("Failed Twine Test.")
+            raise
 
-        self.status("Uploading the package to PyPI via Twine...")
-        os.system("twine upload dist/*")
-
-        self.status("Pushing git tags...")
-        os.system(f"git tag v{about.get('__version__')}")
-        os.system("git push --tags")
-        response = input("Do you want to generate a CHANGELOG.md? (y/n) ")
-        if response.lower() == 'y':
-            self.status("Generating the CHANGELOG.md.")
-            os.system("make changelog")
-        sys.exit()
+        try:
+            self.status("Uploading the package to PyPI via Twine...")
+            cmd = "twine upload dist/*".split()
+            p = Popen(cmd, bufsize=-1)
+            p.communicate()
+        except AssertionError:
+            self.status("Failed to upload to PyPi.")
+            raise
+        else:
+            self.status("Pushing git tags...")
+            os.system(f"git tag v{about.get('__version__')}")
+            os.system("git push --tags")
+            response = input("Do you want to generate a CHANGELOG.md? (y/n) ")
+            if response.lower() == 'y':
+                self.status("Generating the CHANGELOG.md.")
+                os.system("make changelog")
+            sys.exit(p.returncode)
 
 
 setup(
     name=NAME,
     version=about["__version__"],
     description=DESCRIPTION,
-    long_description=DESCRIPTION,
+    long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     author=NAME,
     author_email=EMAIL,
@@ -145,6 +161,7 @@ setup(
         "Bug Reports": f"{URL}/issues",
         "Source": URL,
         "Say Thanks!": f"https://saythanks.io/to/{{ cookiecutter.github_username }}",
+        "Donate!": f"https://paypal.me/{{ cookiecutter.paypal_username }}",
     },
     zip_safe=False,
     # $ setup.py publish support.
