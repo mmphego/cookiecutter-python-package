@@ -14,6 +14,7 @@
   "add_python_version_badge": "y",
   "add_licence_badge": "y",
   "add_saythanks_badge": "y",
+  "add_donate_badge": "y",
   "command_line_interface": [
     "Argparse",
     "No command-line interface"

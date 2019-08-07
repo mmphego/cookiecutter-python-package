@@ -16,6 +16,9 @@
 {% if cookiecutter.add_saythanks_badge == 'y' %}
 [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/{{ cookiecutter.github_username }})
 {% endif %}
+{% if cookiecutter.add_donate_badge == 'y' %}
+[![Donate](https://img.shields.io/badge/Donate-%24-green.svg)](https://paypal.me/{{ cookiecutter.paypal_username }})
+{% endif %}
 
 {{ cookiecutter.project_short_description }}
 
@@ -60,10 +63,12 @@ python setup.py install
 ```bash
 {{cookiecutter.project_running_script}}.py -h
 ```
-# Oh, Thanks!
 
-By the way...
-Click if you'd like to [saythanks](https://saythanks.io/to/>{{cookiecutter.github_username}})... :) else *Star* it.
+# Donations
+
+If you like this and want to buy me a cup of coffee, please click the donation button above or click this [link](https://paypal.me/{{ cookiecutter.paypal_username }}) ☕
+
+Also you can click if you'd like to [saythanks](https://saythanks.io/to/>{{cookiecutter.github_username}})... :) else *Star* it.
 
 ✨🍰✨
 
