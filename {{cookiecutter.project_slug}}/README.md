@@ -68,7 +68,7 @@ python setup.py install
 
 If you like this and want to buy me a cup of coffee, please click the donation button above or click this [link](https://paypal.me/{{ cookiecutter.paypal_username }}) ☕
 
-Also you can click if you'd like to [saythanks](https://saythanks.io/to/>{{cookiecutter.github_username}})... :) else *Star* it.
+Also you can click if you'd like to [saythanks](https://saythanks.io/to/{{cookiecutter.github_username}})... :) else *Star* it.
 
 ✨🍰✨
 
