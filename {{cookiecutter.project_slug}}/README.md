@@ -1,6 +1,7 @@
 {% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
 # {{ cookiecutter.project_name }}
 
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![GitHub](https://img.shields.io/github/license/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}.svg)](LICENSE)
 [![Build Status](https://img.shields.io/travis/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }}.svg)](https://travis-ci.com/{{ cookiecutter.github_username}}/{{ cookiecutter.project_slug }})
 {% if cookiecutter.add_codacy_badge == 'y' %}
