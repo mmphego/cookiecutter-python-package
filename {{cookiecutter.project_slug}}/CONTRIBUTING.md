@@ -99,20 +99,18 @@ Before you submit a pull request, check that it meets these guidelines:
     Put your new functionality into a function with a docstring, and add
     the feature to the list in README.rst.
 3.  The pull request should work for Python 3.6+, and
-    for PyPi. Check [travis-ci](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/pull_requests) and make sure that the tests pass for supported Python version(s).
+    for PyPi.
+    Check [travis-ci](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/pull_requests) and make sure that the tests pass for supported Python version(s).
 
 ### Tips
 
 To run a subset of tests:
 ```bash
-python3 -m unittest [tests.test](){{ cookiecutter.project_slug }}
+python3 -m unittest tests.test_{{ cookiecutter.project_slug }}
 ```
 
 ## Deploying
 
 A reminder for the maintainers on how to publish. Make sure all your
 changes are committed (including an entry in CHANGELOG.md).
-Then run:
-    ```bash
-    python setup.py publish
-    ```
+Then run: `python setup.py publish`
