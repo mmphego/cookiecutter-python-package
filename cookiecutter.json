@@ -11,6 +11,7 @@
   "version": "0.1.0",
   "add_pypi_badge": "y",
   "add_codacy_badge": "y",
+  "add_coveralls_badge": "y",
   "add_python_version_badge": "y",
   "add_licence_badge": "y",
   "add_saythanks_badge": "y",

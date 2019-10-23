@@ -96,7 +96,7 @@ class UploadCommand(Command):
         self.status("Building Source and Wheel (universal) distribution...")
         os.system(f"{sys.executable} setup.py sdist bdist_wheel --universal")
         try:
-            cmd = "twine test dist/*".split(" ")
+            cmd = "twine check dist/*".split(" ")
             p = Popen(cmd, bufsize=-1)
             p.communicate()
             assert p.returncode == 0
