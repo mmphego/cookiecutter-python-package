@@ -153,6 +153,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ],
     keywords='{{ cookiecutter.project_slug }}',
     test_suite='tests',
@@ -160,7 +161,6 @@ setup(
     project_urls={
         "Bug Reports": f"{URL}/issues",
         "Source": URL,
-        "Say Thanks!": f"https://saythanks.io/to/{{ cookiecutter.github_username }}",
         "Donate!": f"https://paypal.me/{{ cookiecutter.paypal_username }}",
     },
     zip_safe=False,

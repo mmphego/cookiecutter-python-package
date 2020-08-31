@@ -31,7 +31,8 @@
 To install {{ cookiecutter.project_name }}, run this command in your terminal:
 
 ```python
-    pip install -U {{ cookiecutter.project_slug }}
+    pip install git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git
+    
 ```
 
 This is the preferred method to install {{ cookiecutter.project_name }},
@@ -68,13 +69,17 @@ python setup.py install
 {{cookiecutter.project_running_script}}.py -h
 ```
 
+or
+
+```bash
+docker build -t "$USER/$(basename $PWD)" .
+docker run --rm -ti --volume "$PWD":/app "$USER/$(basename $PWD)" \
+    {{cookiecutter.project_running_script}}.py -h
+```
+
 # Donations
 
 If you like this and want to buy me a cup of coffee, please click the donation button above or click this [link](https://paypal.me/{{ cookiecutter.paypal_username }}) ☕
-
-Also you can click if you'd like to [saythanks](https://saythanks.io/to/{{cookiecutter.github_username}})... :) else *Star* it.
-
-✨🍰✨
 
 # Feedback
 
