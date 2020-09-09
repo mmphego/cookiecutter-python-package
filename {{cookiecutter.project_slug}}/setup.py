@@ -134,7 +134,6 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(
-        include=['{{ cookiecutter.project_slug }}'],
         exclude=["tests", "*.tests", "*.tests.*", "tests.*"]
         ),
     install_requires=REQUIRED,
@@ -154,6 +153,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
     ],
     keywords='{{ cookiecutter.project_slug }}',
     test_suite='tests',

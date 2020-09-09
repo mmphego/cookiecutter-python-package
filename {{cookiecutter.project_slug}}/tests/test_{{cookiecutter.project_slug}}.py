@@ -14,12 +14,12 @@ class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
-        pass
+        raise NotImplementedError("method not implemented!")
 
     def tearDown(self):
         """Tear down test fixtures, if any."""
-        pass
+        raise NotImplementedError("method not implemented!")
 
     def test_000_something(self):
         """Test something."""
-        pass
+        raise NotImplementedError("method not implemented!")

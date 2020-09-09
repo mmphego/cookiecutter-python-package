@@ -9,13 +9,12 @@
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_running_script": "tweeter_sentiment_checker",
   "version": "0.1.0",
-  "add_pypi_badge": "y",
-  "add_codacy_badge": "y",
-  "add_coveralls_badge": "y",
+  "add_pypi_badge": "n",
+  "add_codacy_badge": "n",
+  "add_coveralls_badge": "n",
   "add_python_version_badge": "y",
   "add_licence_badge": "y",
-  "add_saythanks_badge": "y",
-  "add_donate_badge": "y",
+  "add_donate_badge": "n",
   "command_line_interface": [
     "Argparse",
     "No command-line interface"
